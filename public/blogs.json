@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Company Registration",
+    "category": "Company",
+    "content": "<h1>Company Registration Services</h1><p>At <strong>The_Exim_Roof</strong>, we simplify the company registration process for startups and growing businesses. Whether you want to register a Private Limited Company, LLP, or Partnership, our experts ensure a smooth and hassle-free experience.</p><ul><li>Guidance on business structure selection</li><li>Preparation & filing of legal documents</li><li>Fast and transparent registration process</li></ul><p>Start your business journey with confidence and compliance.</p>"
+  },
+  {
+    "id": 2,
+    "title": "GST Registration",
+    "category": "GST",
+    "content": "<h1>GST Registration & Filing</h1><p>Stay tax-compliant with our <strong>GST Registration & Return Filing</strong> services. We help businesses obtain GSTIN quickly and manage monthly/quarterly filings without stress.</p><ul><li>New GST registration</li><li>GST return filing & compliance</li><li>Expert tax consultation</li></ul><p>With The_Exim_Roof, ensure your business runs smoothly under GST rules.</p>"
+  },
+  {
+    "id": 3,
+    "title": "Import & Export",
+    "category": "ImportExport",
+    "content": "<h1>Import & Export Solutions</h1><p><strong>The_Exim_Roof</strong> provides end-to-end support for import-export businesses. From IEC (Import Export Code) registration to documentation and compliance, we ensure your trade goes global seamlessly.</p><ul><li>IEC registration</li><li>Customs clearance support</li><li>Export compliance & advisory</li></ul><p>Expand your business beyond borders with our professional assistance.</p>"
+  },
+  {
+    "id": 4,
+    "title": "Consultancy",
+    "category": "Consultancy",
+    "content": "<h1>Business Consultancy Services</h1><p>Our consultancy services help you take the right business decisions with confidence. At <strong>The_Exim_Roof</strong>, we provide expert guidance in compliance, finance, taxation, and international trade.</p><ul><li>Compliance & legal advisory</li><li>Taxation & financial planning</li><li>Export-import business guidance</li></ul><p>We are your trusted partner for sustainable growth.</p>"
+  },
+  {
+    "id": 5,
+    "title": "Manpower",
+    "category": "Manpower",
+    "content": "<h1>Manpower Services</h1><p>We provide reliable <strong>manpower services</strong> tailored to your industry needs. From skilled workers to professional staff, <strong>The_Exim_Roof</strong> ensures you find the right talent at the right time.</p><ul><li>Skilled & unskilled workforce</li><li>Industry-specific manpower supply</li><li>Cost-effective hiring solutions</li></ul><p>Grow your business with the right team by your side.</p>"
+  }
+]
