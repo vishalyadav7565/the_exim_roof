@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { Facebook, Instagram, Linkedin, ArrowUp } from "lucide-react";
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  ArrowUp,
+  MapPin,
+  Phone,
+  Mail,
+} from "lucide-react";
+import FooterComments from "./FooterComments";
 
 const Footer = () => {
   const [showButton, setShowButton] = useState(false);
@@ -10,114 +19,204 @@ const Footer = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollToTop = () =>
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
-    <footer className="relative bg-gradient-to-br from-[#010203] via-[#424343] to-[#091413] overflow-hidden">
-      {/* Top Contact Bar */}
-      <div className="bg-[#424343] px-6 py-3 flex flex-col md:flex-row items-center justify-between text-sm space-y-2 md:space-y-0">
-        <div className="space-y-1 md:space-y-0 md:space-x-4 text-center md:text-left">
-          <p>
-            <span className="text-yellow-400 font-semibold">Corporate Office:</span>{" "}
-            C–100, Sec–2, Noida, UP – 201301
-          </p>
-          <p>
-            <span className="text-yellow-400 font-semibold ">Registered Office:</span>{" "}
-            73, National Park, Lajpat Nagar–IV, New Delhi – 110024
-          </p>
-        </div>
-        <div className="flex items-center space-x-5 text-sm">
-          <p>📞 +91-999900-3311</p>
-          <p>✉️ info@ascgroup.in</p>
-          <div className="flex space-x-3">
-            <a href="#" className="hover:text-yellow-400"><Facebook size={18} /></a>
-            <a href="#" className="hover:text-yellow-400"><Instagram size={18} /></a>
-            <a href="#" className="hover:text-yellow-400"><Linkedin size={18} /></a>
+    <footer className="relative bg-gradient-to-br from-[#010203] via-[#1b2b2a] to-[#091413] text-gray-300 overflow-hidden">
+
+      {/* ================= TOP CONTACT BAR ================= */}
+      <div className="bg-black/60 border-b border-white/10 px-6 py-3 flex flex-col md:flex-row items-center justify-between text-sm">
+        <span className="text-gray-300">
+          Need Help? Talk to our Compliance Experts
+        </span>
+
+        <div className="flex flex-wrap items-center gap-5 mt-2 md:mt-0">
+          <span className="flex items-center gap-1">
+            <Phone size={14} /> +91-8546066019
+          </span>
+
+          <span className="flex items-center gap-1">
+            <Mail size={14} /> info@theeximroof.com
+          </span>
+
+          <div className="flex gap-3">
+            <a
+              href="https://www.facebook.com/theeximroof"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label="Facebook"
+              className="hover:text-yellow-400 transition"
+            >
+              <Facebook size={18} />
+            </a>
+
+            <a
+              href="https://www.instagram.com/theeximroof/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label="Instagram"
+              className="hover:text-yellow-400 transition"
+            >
+              <Instagram size={18} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/the-exim-roof/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label="LinkedIn"
+              className="hover:text-yellow-400 transition"
+            >
+              <Linkedin size={18} />
+            </a>
           </div>
         </div>
       </div>
 
-      {/* Main Footer Section */}
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 relative">
-        {/* Background pattern mimic */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_#012b85_0%,_#00184a_80%)] opacity-60 -z-10"></div>
+      {/* ================= MAIN FOOTER ================= */}
+      <div className="max-w-7xl mx-auto px-6 py-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 relative">
 
-        {/* Important Links */}
+        {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-semibold text-yellow-400 mb-4">Important Links</h3>
-          <ul className="space-y-2 text-gray-200 text-sm">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Blogs</li>
-            <li>Career</li>
-            <li>Contact Us</li>
-            <li>Newsletter</li>
+          <h3 className="text-lg font-semibold text-yellow-400 mb-4">
+            Quick Links
+          </h3>
+          <ul className="space-y-2 text-sm">
+            {["Home", "About Us", "Services", "Blogs", "Career", "Contact"].map(
+              (link) => (
+                <li
+                  key={link}
+                  className="hover:text-yellow-400 cursor-pointer transition"
+                >
+                  {link}
+                </li>
+              )
+            )}
           </ul>
         </div>
 
-        {/* Support */}
+        {/* Policies */}
         <div>
-          <h3 className="text-xl font-semibold text-yellow-400 mb-4">Support</h3>
-          <ul className="space-y-2 text-gray-200 text-sm">
-            <li>Corporate Profile</li>
-            <li>CSR Policy</li>
-            <li>Privacy Policy</li>
-            <li>Anti Bribery Policy</li>
-            <li>Latest Update</li>
-            <li>Local Page</li>
+          <h3 className="text-lg font-semibold text-yellow-400 mb-4">
+            Policies
+          </h3>
+          <ul className="space-y-2 text-sm">
+            {[
+              "Corporate Profile",
+              "CSR Policy",
+              "Privacy Policy",
+              "Anti-Bribery Policy",
+              "Latest Updates",
+            ].map((item) => (
+              <li
+                key={item}
+                className="hover:text-yellow-400 cursor-pointer transition"
+              >
+                {item}
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Group Websites */}
+        {/* Office */}
         <div>
-          <h3 className="text-xl font-semibold text-yellow-400 mb-4">Group Websites</h3>
-          <ul className="space-y-2 text-gray-200 text-sm">
-            <li><a href="#" className="hover:text-yellow-400">www.ascgroup.sg</a></li>
-            <li><a href="#" className="hover:text-yellow-400">www.insolvencyservices.in</a></li>
-            <li><a href="#" className="hover:text-yellow-400">www.asccertification.com</a></li>
-            <li><a href="#" className="hover:text-yellow-400">www.ascventures.ca</a></li>
-            <li><a href="#" className="hover:text-yellow-400">www.legalmetrology.in</a></li>
-            <li><a href="#" className="hover:text-yellow-400">www.eximadvisory.com</a></li>
-          </ul>
+          <h3 className="text-lg font-semibold text-yellow-400 mb-3">
+            Our Office
+          </h3>
+
+          <p className="text-sm flex gap-2 mb-3">
+            <MapPin size={16} />
+            The Exim Roof, Noida, Uttar Pradesh, India
+          </p>
+
+          <div className="aspect-[16/9] rounded-lg overflow-hidden border border-white/10 shadow-lg">
+            <iframe
+              title="The Exim Roof Location"
+              src="https://www.google.com/maps?q=The+Exim+Roof&output=embed"
+              className="w-full h-full border-0"
+              loading="lazy"
+            />
+          </div>
+
+          <a
+            href="https://www.google.com/maps/dir/?api=1&destination=The+Exim+Roof"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="inline-block mt-3 text-sm text-yellow-400 hover:underline"
+          >
+            Get Directions →
+          </a>
         </div>
 
-        {/* Newsletter Subscription */}
+        {/* Newsletter */}
         <div>
-          <h3 className="text-xl font-semibold text-yellow-400 mb-4">Newsletter Subscription</h3>
+          <h3 className="text-lg font-semibold text-yellow-400 mb-4">
+            Newsletter
+          </h3>
+
+          <p className="text-sm mb-3">
+            Stay updated with compliance & certification news.
+          </p>
+
           <form className="space-y-3">
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full px-3 py-2 rounded-md bg-white/10 border border-gray-400 text-white placeholder-gray-300"
+              className="w-full px-3 py-2 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400"
             />
+
             <input
               type="email"
               placeholder="Your Email"
-              className="w-full px-3 py-2 rounded-md bg-white/10 border border-gray-400 text-white placeholder-gray-300"
+              className="w-full px-3 py-2 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400"
             />
+
             <button
               type="submit"
-              className="w-full bg-yellow-400 text-[#002366] font-semibold py-2 rounded-md hover:bg-yellow-500 transition"
+              className="w-full bg-yellow-400 text-black font-semibold py-2 rounded-md hover:bg-yellow-500 transition"
             >
-              SUBSCRIBE
+              Subscribe
             </button>
           </form>
         </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="bg-[#001a4d] py-4 text-center text-gray-300 text-sm">
-        © 2025 ASC Group. All Rights Reserved. Designed by{" "}
-        <a href="https://www.instagram.com/novusviatech/" className="text-yellow-400 hover:underline">
+      {/* ================= COMMENTS SECTION ================= */}
+<div className="relative z-10 bg-black/50 border-t border-white/10 py-10">
+  <div className="max-w-7xl mx-auto px-6">
+    <h3 className="text-center text-yellow-400 text-lg font-semibold mb-50">
+  
+    </h3>
+
+    <FooterComments/>
+  </div>
+</div>
+
+      {/* ================= BOTTOM BAR ================= */}
+      <div className="bg-black/70 py-4 text-center text-sm text-gray-400">
+        © 2026{" "}
+        <span className="text-yellow-400 font-medium">
+          The Exim Roof
+        </span>. All Rights Reserved.
+        <br />
+        Designed by{" "}
+        <a
+          href="https://www.instagram.com/novusviatech/"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="text-yellow-400 hover:underline"
+        >
           Novusviatech
         </a>
       </div>
 
-      {/* Scroll To Top Button */}
+      {/* ================= SCROLL TO TOP ================= */}
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-blue-400 hover:bg-blue-500 text-[#002366] p-3 rounded-full shadow-lg transition duration-300"
+          className="fixed bottom-6 right-6 bg-yellow-400 text-black p-3 rounded-full shadow-xl hover:scale-110 transition"
+          aria-label="Scroll to top"
         >
           <ArrowUp size={20} />
         </button>

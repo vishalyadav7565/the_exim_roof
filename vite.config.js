@@ -4,13 +4,18 @@ import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: "./", // ✅ ensures assets load correctly on Netlify
+  base: "./",
   build: {
-    outDir: "dist",              // Netlify expects dist
-    chunkSizeWarningLimit: 1000, // silence big bundle warning (optional)
-  },
-  server: {
-    port: 5173, // local dev port
-    open: true, // auto-open browser
-  },
+    outDir: "dist",
+    chunkSizeWarningLimit: 1500,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor'
+          }
+        }
+      }
+    }
+  }
 })

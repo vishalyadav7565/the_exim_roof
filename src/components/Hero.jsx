@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Truck, Users, Package, Settings } from "lucide-react"; // icons
-import heroImg from "../../src/assets/the_exim_home.jpg";
+import heroImg from "../../src/assets/the_exim_home.webp";
 
 const cards = [
   { 

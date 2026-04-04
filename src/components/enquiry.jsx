@@ -114,16 +114,17 @@ const Enquiry = () => {
                 className="inline-flex items-center gap-3 text-lg font-medium text-green-400 hover:text-green-300 transition"
               >
                 <FaPhoneAlt className="text-xl" />
-                +91 98765 43210
+                +91-8546066019
               </a>
+
 
               {/* Email */}
               <a
                 href="mailto:support@yourdomain.com"
                 className="inline-flex items-center gap-3 text-lg font-medium text-blue-400 hover:text-blue-300 transition"
               >
-                <FaEnvelope className="text-xl" />
-                support@yourdomain.com
+              <FaEnvelope className="text-xl" />
+                  info@theeximroof.com
               </a>
 
               {/* Location */}

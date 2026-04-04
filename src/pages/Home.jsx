@@ -78,15 +78,40 @@ const Home = () => {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <div className="text-center mt-10 px-6">
-        <h1 className="text-4xl font-bold text-cyan-50">
-          Welcome to The Exim Roof
-        </h1>
-        <p className="mt-4 text-lg text-fuchsia-200">
-          Learn more about The Exim Roof and our expertise in Business,
-          Finance, Tax, HR, and Global Trade.
-        </p>
-      </div>
+      {/* Hero Section */}
+<div className="text-center mt-16 px-6">
+  <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-purple-500 drop-shadow-lg">
+    Welcome to The Exim Roof
+  </h1>
+
+  <p className="mt-6 text-lg text-fuchsia-100 leading-relaxed max-w-3xl mx-auto">
+    At <strong>The Exim Roof</strong>, we don’t just talk business — we help you
+    redefine it. From <span className="text-cyan-300">Finance</span> to{" "}
+    <span className="text-cyan-300">Global Trade</span>, our mission is to
+    empower visionaries, entrepreneurs, and enterprises with insights that
+    transform complexity into clarity.
+  </p>
+
+  <p className="mt-4 text-lg text-fuchsia-100 leading-relaxed max-w-3xl mx-auto">
+    In a world that never stops evolving, you need more than just information —
+    you need intelligence that adapts. Our experts bring a fusion of
+    <em> strategy, innovation, and data-driven thinking </em> to help you stay
+    ahead, make smarter decisions, and build a resilient global presence.
+  </p>
+
+  <p className="mt-4 text-lg text-fuchsia-100 leading-relaxed max-w-3xl mx-auto">
+    The Exim Roof is where knowledge meets action — your launchpad for business
+    excellence in the digital era. Discover curated insights, bold ideas, and
+    global opportunities designed for the thinkers and doers shaping tomorrow.
+  </p>
+
+  <p className="mt-8 text-xl font-semibold text-cyan-200">
+    Learn. Evolve. Lead. <br />
+    <span className="text-fuchsia-400">Your growth starts here.</span>
+  </p>
+</div>
+
+
 
 {/* About Section */}
 
@@ -176,7 +201,7 @@ const Home = () => {
         className="p-8 rounded-3xl bg-gradient-to-tr from-emerald-600/10 to-emerald-500/20 backdrop-blur-md border border-emerald-400 shadow-lg text-center cursor-pointer hover:shadow-emerald-400/50 transition"
       >
         <Users className="w-12 h-12 mx-auto mb-5 text-emerald-400" />
-        <h4 className="text-2xl font-bold text-emerald-300 mb-3">Customer First</h4>
+        <h4 className="text-2xl font-bold text-emerald-300 mb-3">Work First</h4>
         <p className="text-white/80 leading-relaxed">
           Clients are at the heart of everything we do, ensuring trust and satisfaction.
         </p>
@@ -185,56 +210,61 @@ const Home = () => {
   </div>
 </section>
 
-
-
-      {/* Services Section */}
-      <section className="py-16 px-6">
+{/* Services Section */}
+<section className="py-16 px-6">
   <h2 className="text-3xl font-bold mb-10 text-center text-cyan-200">
     Our Services
   </h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
     {[
-      { name: "GST Registration", path: "gst", glow: "0 0 25px rgba(16,185,129,0.8)", bg: "rgba(16,185,129,0.15)" },
-      { name: "ITR Return", path: "itr-return", glow: "0 0 25px rgba(6,182,212,0.8)", bg: "rgba(6,182,212,0.15)" },
-      { name: "Company Registration", path: "company", glow: "0 0 25px rgba(234,179,8,0.8)", bg: "rgba(234,179,8,0.15)" },
-      { name: "Consultancy", path: "consultancy", glow: "0 0 25px rgba(168,85,247,0.8)", bg: "rgba(168,85,247,0.15)" },
-      { name: "Human Resources", path: "manpower", glow: "0 0 25px rgba(236,72,153,0.8)", bg: "rgba(236,72,153,0.15)" },
-      { name: "Import", path: "import", glow: "0 0 25px rgba(16,185,129,0.8)", bg: "rgba(16,185,129,0.15)" },
-      { name: "Export", path: "export", glow: "0 0 25px rgba(6,182,212,0.8)", bg: "rgba(6,182,212,0.15)" },
-      { name: "E-commerce", path: "ecommerce", glow: "0 0 25px rgba(168,85,247,0.8)", bg: "rgba(168,85,247,0.15)" },
-      { name: "Finance", path: "finance", glow: "0 0 25px rgba(234,179,8,0.8)", bg: "rgba(234,179,8,0.15)" },
+      { name: "BIS FMCS Certification", path: "bis-fmcs" },
+      { name: "TEC Certification Consultants India", path: "tec-certification" },
+      { name: "STQC Certification Consultants India", path: "stqc-certification" },
+      { name: "BIS Scheme X Certification Consultant", path: "bis-scheme-x" },
+      { name: "CTE / CTO Consent to Establish & Operate", path: "cte-cto" },
+      { name: "BIS CRS Registration", path: "bis-crs" },
+      { name: "Legal Metrology (LMPC) Certificate", path: "legal-metrology-certificate-in-india" },
+      { name: "Bureau of Indian Standards (BIS) Certification", path: "bis-certification" },
+      { name: "Extended Producer Responsibility (EPR) Registration", path: "epr-registration" },
+      { name: "NOC for Ministry of Steel", path: "steel-noc" },
+      { name: "CDSCO Registration", path: "cdsco-registration" },
+      { name: "WPC ETA Certification Services", path: "wpc-eta" },
+      { name: "AERB Certification", path: "aerb-certification" },
+      { name: "Company Registration", path: "company" },
+      { name: "Import", path: "import" },
     ].map((service, index) => (
       <Link key={index} to={`/service/${service.path}`}>
         <motion.div
-          className="p-6 rounded-xl cursor-pointer"
-          initial={{ opacity: 0, y: 50 }}
+          className="p-6 rounded-xl cursor-pointer h-full"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
+          transition={{ duration: 0.5, delay: index * 0.05 }}
           whileHover={{
-            scale: 1.08,
-            backgroundColor: service.bg,
-            boxShadow: service.glow,
+            scale: 1.06,
+            backgroundColor: "rgba(6,182,212,0.12)",
+            boxShadow: "0 0 25px rgba(6,182,212,0.6)",
           }}
           style={{
             backgroundColor: "transparent",
             boxShadow: `5px 25px 75px rgba(0,0,0,0.75),
-                        10px 10px 70px rgba(0,0,0,0.25),
-                        inset 5px 5px 10px rgba(0,0,0,0.5),
-                        inset 5px 5px 20px rgba(255,255,255,0.2),
-                        inset -5px -5px 15px rgba(0,0,0,0.75)`,
+                        inset 5px 5px 15px rgba(255,255,255,0.15),
+                        inset -5px -5px 15px rgba(0,0,0,0.7)`,
           }}
         >
-          <h3 className="text-xl font-semibold text-emerald-200">{service.name}</h3>
-          <p className="text-fuchsia-200 mt-2">
-            Expert solutions tailored for your business needs in{" "}
-            {service.name.toLowerCase()}.
+          <h3 className="text-lg font-semibold text-emerald-200">
+            {service.name}
+          </h3>
+          <p className="text-fuchsia-200 mt-2 text-sm">
+            Complete consultancy and compliance support for {service.name}.
           </p>
         </motion.div>
       </Link>
     ))}
   </div>
 </section>
+
 
       {/* Achievements Section */}
       <section className="max-w-6xl mx-auto py-16 px-6 text-center">
@@ -249,19 +279,19 @@ const Home = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
           <div>
             <Counter from={0} to={500} duration={3} />
-            <p className="text-cyan-200">Clients Served</p>
+            <p className="text-cyan-200"> Industries Served</p>
           </div>
           <div>
-            <Counter from={0} to={200} duration={3} />
-            <p className="text-cyan-200">Company Registrations</p>
-          </div>
-          <div>
-            <Counter from={0} to={300} duration={3} />
-            <p className="text-cyan-200">GST Returns Filed</p>
+            <Counter from={0} to={20} duration={3} />
+            <p className="text-cyan-200">Compliance Certifications</p>
           </div>
           <div>
             <Counter from={0} to={50} duration={3} />
             <p className="text-cyan-200">Expert Consultants</p>
+          </div>
+          <div>
+            <Counter from={0} to={7} duration={3} />
+            <p className="text-cyan-200">Years of Compliance Expertise</p>
           </div>
         </div>
       </section>
